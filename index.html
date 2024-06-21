@@ -8,49 +8,51 @@
 </head>
 <body>
     <div>
-        <form>
+        <form onsubmit="return validarFormulario()" action="sucesso.html">
             <fieldset>
                 <legend>Validação de Formulário</legend>
                 
-                <label for="nome">Nome:</label> 
-                <input type="text" name="text" size="50" maxlength="50" placeholder="Digite o nome..." id="nome" required>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" size="50" maxlength="50" placeholder="Digite o nome..." id="nome" required>
                 
-                <label for="dataNas">Data de Nascimento:</label> 
-                <input type="date" name="Data" id="dataNas" required>
+                <label for="dataNas">Data de Nascimento:</label>
+                <input type="date" name="dataNas" id="dataNas" required>
                 
                 <label for="email">Email:</label>
-                <input type="text" name="text" placeholder="exemplo@gmail.com" id="email" required>
+                <input type="email" name="email" placeholder="Ex: exemplo@gmail.com" id="email" required>
                 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" name="Telefone"placeholder="(11) 98765-4321" id="telefone" required>
+                <input type="tel" name="telefone" maxlength="13" placeholder="Ex: 11 98765-4321" id="telefone" required>
                 
                 <label for="serie">Série:</label>
-                <select name="Série" id="serie" required>
-                    <option value="null" selected="selected" disabled>Selecione...</option>
+                <select name="serie" id="serie" required>
+                    <option value="" selected disabled>Selecione...</option>
                     <option value="1serie">1° Série</option>
                     <option value="2serie">2° Série</option>
                     <option value="3serie">3° Série</option>
                     <option value="4serie">4° Série</option>
                 </select>
                 
-                <label for="turnos">Turnos:</label>
-                <input type="radio" value="Manha" name="turnos" id="turnos" required> Manhã
-                <input type="radio" value="Tarde" name="turnos" id="turnos" required> Tarde
-                <input type="radio" value="Noite" name="turnos" id="turnos" required> Noite
-
-                <label for="atividades">Atividades extra-curriculares:</label> 
-                Teatro<input type="checkbox" name="atividades" id="atividades" required>
-                Música<input type="checkbox" name="atividades" id="atividades" required>
-                Ballet<input type="checkbox" name="atividades" id="atividades" required>
-                Pintura<input type="checkbox" name="atividades" id="atividades" required>
-                Judô<input type="checkbox" name="atividades" id="atividades" required>
-                Futebol<input type="checkbox" name="atividades" id="atividades" required> 
-                <br>
-                <input type="reset" value="limpar" class="btns" id="btnReset">
-                <input type="submit" value="cadastrar" class="btns" id="btnCadastro">
-            </fieldset>    
-        </form>    
+                <label>Turnos:</label>
+                <input type="radio" value="Manha" name="turno" id="turnoManha" required> Manhã
+                <input type="radio" value="Tarde" name="turno" id="turnoTarde" required> Tarde
+                <input type="radio" value="Noite" name="turno" id="turnoNoite" required> Noite
+                
+                <label>Atividades extra-curriculares:</label>
+                <input type="checkbox" name="atividade" class="atividades"> Teatro
+                <input type="checkbox" name="atividade" class="atividades"> Música
+                <input type="checkbox" name="atividade" class="atividades"> Ballet
+                <input type="checkbox" name="atividade" class="atividades"> Pintura
+                <input type="checkbox" name="atividade" class="atividades"> Judô
+                <input type="checkbox" name="atividade" class="atividades"> Futebol
+                
+                <br><br>
+                <input type="reset" value="Limpar" class="btns" id="btnReset">
+                <input type="submit" value="Cadastrar" class="btns" id="btnCadastro">
+            </fieldset>
+        </form>
     </div>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>

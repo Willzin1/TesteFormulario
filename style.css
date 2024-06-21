@@ -5,7 +5,7 @@
 
 body {
     font: normal 15pt monospace;
-    background: rgb(204, 202, 202);
+    background: rgb(243, 241, 241);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 
 div {
     border: 2px solid black;
-    background: linear-gradient(gray, white, whitesmoke);
+    background: rgb(184, 182, 182);
 }
  
 form {
@@ -37,10 +37,6 @@ label {
     display: block;
     margin-top: 20px;
     margin-bottom: 10px;
-}
-
-#atividades {
-    display: block;
 }
 
 input, select {
@@ -72,4 +68,20 @@ input, select {
 
 .btns:hover {
     opacity: 80%;
+}
+
+
+/* Estilização segunda página (sucesso.html) */
+.roll {
+    text-align: center;
+    padding: 30px;
+    margin: 10px;
+    color: rgba(5, 3, 3, 0.884);
+}
+h1, p, .btnVoltar {
+    padding: 15px;
+}
+span {
+    color: green;
+    text-transform: uppercase;
 }
