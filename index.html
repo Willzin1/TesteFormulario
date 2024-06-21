@@ -1,20 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
+    <title>Validar Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div>
-        Nome: 
-        <input type="text" name="text" placeholder="Digite o nome..." id="nome">
-        Telefone:
-        <input type="tel" name="Telefone" placeholder="Informe o seu telefone..." id="telefone">
-        Email:
-        <input type="text" name="text" placeholder="Digite o email.." id="email">
-    </div>    
+        <form>
+            <fieldset>
+                <legend>Validação de Formulário</legend>
+                
+                <label for="nome">Nome:</label> 
+                <input type="text" name="text" size="50" maxlength="50" placeholder="Digite o nome..." id="nome" required>
+                
+                <label for="dataNas">Data de Nascimento:</label> 
+                <input type="date" name="Data" id="dataNas" required>
+                
+                <label for="email">Email:</label>
+                <input type="text" name="text" placeholder="exemplo@gmail.com" id="email" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="Telefone"placeholder="(11) 98765-4321" id="telefone" required>
+                
+                <label for="serie">Série:</label>
+                <select name="Série" id="serie" required>
+                    <option value="null" selected="selected" disabled>Selecione...</option>
+                    <option value="1serie">1° Série</option>
+                    <option value="2serie">2° Série</option>
+                    <option value="3serie">3° Série</option>
+                    <option value="4serie">4° Série</option>
+                </select>
+                
+                <label for="turnos">Turnos:</label>
+                <input type="radio" value="Manha" name="turnos" id="turnos" required> Manhã
+                <input type="radio" value="Tarde" name="turnos" id="turnos" required> Tarde
+                <input type="radio" value="Noite" name="turnos" id="turnos" required> Noite
 
+                <label for="atividades">Atividades extra-curriculares:</label> 
+                Teatro<input type="checkbox" name="atividades" id="atividades" required>
+                Música<input type="checkbox" name="atividades" id="atividades" required>
+                Ballet<input type="checkbox" name="atividades" id="atividades" required>
+                Pintura<input type="checkbox" name="atividades" id="atividades" required>
+                Judô<input type="checkbox" name="atividades" id="atividades" required>
+                Futebol<input type="checkbox" name="atividades" id="atividades" required> 
+                <br>
+                <input type="reset" value="limpar" class="btns" id="btnReset">
+                <input type="submit" value="cadastrar" class="btns" id="btnCadastro">
+            </fieldset>    
+        </form>    
+    </div>
+    
 </body>
 </html>

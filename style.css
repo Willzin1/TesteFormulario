@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: normal 15pt monospace;
+    background: rgb(204, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div {
+    border: 2px solid black;
+    background: linear-gradient(gray, white, whitesmoke);
+}
+ 
+form {
+    padding: 20px;
+    max-width: 400px;
+}
+
+fieldset {
+    border: none;
+}
+ 
+legend {
+    font-size: 30px;
+    border-bottom: 1px solid;
+    margin-bottom: 15px;
+}
+ 
+label {
+    text-decoration: underline;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#atividades {
+    display: block;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#dataNas, #nome,
+#email, #telefone {
+    width: 100%;
+}
+
+#btnReset, #btnCadastro {
+    width: 150px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#btnCadastro {
+    background: rgba(5, 151, 5, 0.788);
+}
+
+#btnReset {
+    background: rgba(179, 179, 17, 0.87);
+}
+
+.btns:hover {
+    opacity: 80%;
+}
